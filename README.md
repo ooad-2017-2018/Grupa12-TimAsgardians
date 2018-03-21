@@ -1,9 +1,9 @@
 # Grupa12-TimAsgardians
 
+
 #### Tema: Turisticka agencija "Asgardians"
 
 #### Clanovi tima:
-
 1.Karahasanovic Ajdin
 2.Omerovic Berina
 3.Osmankovic Irma
@@ -41,6 +41,8 @@ Ukoliko korisnik nije prijavljen, zahtjeva se njegova prijava ili registracija, 
 3. Turisticki vodic: ima mogucnost pregleda destinacija gdje moze raditi, te mogucnost odabira jedne.
 4. Korisnik: ima mogucnost pregleda i odabira destinacija na koje zeli putovati, placanje putovanja nakon odabira.
 5. Gost: ima mogucnost pregleda i odabira destinacija na koje zeli putovati, ali nema mogucnost placanja.
+
+
 
 
 
