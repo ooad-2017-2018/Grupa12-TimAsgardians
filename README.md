@@ -4,9 +4,9 @@
 #### Tema: Turisticka agencija "Asgardians"
 
 #### Clanovi tima:
-1.Karahasanovic Ajdin
-2.Omerovic Berina
-3.Osmankovic Irma
+1. Karahasanovic Ajdin
+2. Omerovic Berina
+3. Osmankovic Irma
 
 ## Opis teme:
 
