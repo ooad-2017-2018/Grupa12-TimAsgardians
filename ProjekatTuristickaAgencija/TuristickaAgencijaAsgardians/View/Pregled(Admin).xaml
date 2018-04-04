@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="TuristickaAgencijaAsgardians.Pregled_Admi_"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TuristickaAgencijaAsgardians"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,662,342">
+        <TextBlock HorizontalAlignment="Left" Margin="229,261,0,0" Text="Passengers:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="391,260,0,0" Text="Tourist guids:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.565,0.3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="569,257,0,0" Text="Employees:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ListView HorizontalAlignment="Left" Height="6" Margin="410,479,0,0" VerticalAlignment="Top" Width="15"/>
+        <ListBox HorizontalAlignment="Left" Height="192" Margin="199,308,0,0" VerticalAlignment="Top" Width="114"/>
+        <ListBox HorizontalAlignment="Left" Height="192" Margin="373,309,0,0" VerticalAlignment="Top" Width="115"/>
+        <ListBox HorizontalAlignment="Left" Height="195" Margin="540,305,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="438,552,0,0" VerticalAlignment="Top"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="567,552,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

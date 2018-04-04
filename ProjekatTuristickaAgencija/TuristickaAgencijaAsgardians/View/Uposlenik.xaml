@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="TuristickaAgencijaAsgardians.Uposlenik"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TuristickaAgencijaAsgardians"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="779.5" Width="1221">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListBox HorizontalAlignment="Left" Height="258" Margin="570,380,0,0" VerticalAlignment="Top" Width="180"/>
+        <ListBox HorizontalAlignment="Left" Height="258" Margin="150,296,0,0" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="153,254,0,0" Text="Current destinations:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="526,258,0,0" Text="Click to see passengers on this location:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="531,342,0,0" Text="List of passengers on selected location:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="260,596,0,0" VerticalAlignment="Top"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="182,597,0,0" VerticalAlignment="Top"/>
+        <Button Content="Select" HorizontalAlignment="Left" Margin="634,296,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="884,257,0,0" Text="Click to see details about a passenger:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Passenger details" HorizontalAlignment="Left" Margin="949,299,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="888,364,0,0" Text="Contact the passenger:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="894,413,0,0" Text="Passengers e-mail:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="897,452,0,0" Text="TextBox" VerticalAlignment="Top" Width="204"/>
+        <TextBlock HorizontalAlignment="Left" Margin="903,511,0,0" Text="Message:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="904,541,0,0" Text="TextBox" VerticalAlignment="Top" Width="194" Height="91"/>
+        <Button Content="Send" HorizontalAlignment="Left" Margin="948,636,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
