@@ -20,7 +20,7 @@ namespace TuristickaAgencijaAsgardians.Klase
         {
 
         }
-        public void dodajUposlenika(Uposlenik u)
+        public void dodajUposlenika(Osobe.Uposlenik u)
         {
 
         }
@@ -37,7 +37,7 @@ namespace TuristickaAgencijaAsgardians.Klase
         {
 
         }
-        public void obrisiUposlenika(Uposlenik u)
+        public void obrisiUposlenika(Osobe.Uposlenik u)
         {
 
         }
@@ -50,7 +50,8 @@ namespace TuristickaAgencijaAsgardians.Klase
 
         }
 
-        public void dodajLokaciju(Lokacija l) {
+        public void dodajLokaciju(Lokacija l)
+        {
 
         }
         public void obrisiLokaciju(Lokacija l)

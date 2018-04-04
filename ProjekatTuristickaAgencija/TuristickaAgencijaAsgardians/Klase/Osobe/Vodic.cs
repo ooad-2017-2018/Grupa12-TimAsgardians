@@ -18,6 +18,11 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
         {
         }
 
+        public Vodic(Vodic v)
+        {
+
+        }
+
         public void zaduziNaLokaciju(Lokacija l)
         {
 

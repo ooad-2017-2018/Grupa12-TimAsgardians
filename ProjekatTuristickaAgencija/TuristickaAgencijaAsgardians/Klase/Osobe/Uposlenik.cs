@@ -16,6 +16,11 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
         {
         }
 
+        public Uposlenik(Uposlenik u)
+        {
+
+        }
+
         public void dodajLokaciju(Lokacija l)
         {
 

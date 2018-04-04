@@ -19,6 +19,11 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
         {
         }
 
+        public Putnik(Putnik p)
+        {
+
+        }
+
         public bool Kontaktiran { get => kontaktiran; set => kontaktiran = value; }
         public Dictionary<bool, string> ListaPoruka { get => listaPoruka; set => listaPoruka = value; }
 
