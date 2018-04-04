@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="318a0e6b-6bee-47de-9bb6-fd64959d6f0c"
-    Publisher="CN=Ajdinator 3000"
+    Name="d3c41fa5-1bf1-41e1-9531-c3652964af8f"
+    Publisher="CN=irmao"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="318a0e6b-6bee-47de-9bb6-fd64959d6f0c" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="d3c41fa5-1bf1-41e1-9531-c3652964af8f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>ProjekatTuristickaAgencija</DisplayName>
-    <PublisherDisplayName>Ajdinator 3000</PublisherDisplayName>
+    <DisplayName>TuristickaAgencijaAsgardians</DisplayName>
+    <PublisherDisplayName>irmao</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="ProjekatTuristickaAgencija.App">
+      EntryPoint="TuristickaAgencijaAsgardians.App">
       <uap:VisualElements
-        DisplayName="ProjekatTuristickaAgencija"
+        DisplayName="TuristickaAgencijaAsgardians"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="ProjekatTuristickaAgencija"
+        Description="TuristickaAgencijaAsgardians"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

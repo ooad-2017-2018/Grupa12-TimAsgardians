@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="TuristickaAgencijaAsgardians.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TuristickaAgencijaAsgardians"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="99,36,930,585">
+        <TextBox HorizontalAlignment="Left" Margin="173,70,0,0" Text="TextBox" VerticalAlignment="Top" Width="235"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,74,0,0" Text="Username:" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="124"/>
+        <TextBlock HorizontalAlignment="Left" Margin="59,143,0,0" Text="Password:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="173,133,0,0" Text="TextBox" VerticalAlignment="Top" Width="232"/>
+        <TextBlock HorizontalAlignment="Left" Margin="129,272,0,0" Text="Don't have an account?" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Log in" HorizontalAlignment="Left" Margin="259,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.085,0.188"/>
+        <Button Content="Sign up" HorizontalAlignment="Left" Margin="321,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.667,14"/>
+
+    </Grid>
+</Page>
