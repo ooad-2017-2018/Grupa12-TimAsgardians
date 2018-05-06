@@ -12,6 +12,9 @@ namespace TuristickaAgencijaAsgardians.Klase
         private List<Osoba> osobe;
         private List<Lokacija> lokacije;
 
+        public List<Osoba> Osobe { get => osobe; set => osobe = value; }
+        public List<Lokacija> Lokacije { get => lokacije; set => lokacije = value; }
+
         public TuristickaAgencija()
         {
         }

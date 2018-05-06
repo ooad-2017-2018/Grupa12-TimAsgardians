@@ -45,6 +45,16 @@ namespace TuristickaAgencijaAsgardians.View
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             if (textBoxUser.Text == "admin" && textBoxPass.Text == "admin") myView.Navigate(typeof(PregledAdminView));
+            for(int i = 0; i < tours.Osobe.Count; i++)
+            {
+                if(textBoxUser.Text == tours.Osobe[i].Username && textBoxPass.Text == tours.Osobe[i].Password)
+                {
+                    if(tours.Osobe[i].GetType()==typeof(Vodic)) myView.Navigate(typeof(PregledAdminView));//promjenit
+                    if (tours.Osobe[i].GetType() == typeof(Putnik)) myView.Navigate(typeof(PregledAdminView));//promjenit
+                    if (tours.Osobe[i].GetType() == typeof(Uposlenik)) myView.Navigate(typeof(UposlenikView));
+                    
+                }
+            }
         }
 
         private void textBoxPass_KeyDown(object sender, KeyRoutedEventArgs e)
@@ -55,6 +65,11 @@ namespace TuristickaAgencijaAsgardians.View
         private void textBoxPass_PreviewKeyDown(object sender, KeyRoutedEventArgs e)
         {
             if (textBoxUser.Text == "admin" && textBoxPass.Text == "admin" && e.Key.Equals('\n')) myView.Navigate(typeof(PregledAdminView));
+        }
+
+        private void myView_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }

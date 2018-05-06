@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TuristickaAgencijaAsgardians.Klase;
+using TuristickaAgencijaAsgardians.Klase.Osobe;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +24,27 @@ namespace TuristickaAgencijaAsgardians.View
     /// </summary>
     public sealed partial class PregledAdminView : Page
     {
+        TuristickaAgencija tours;
         public PregledAdminView()
         {
             this.InitializeComponent();
+        }
+        
+
+        private void Button_Click_del(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < tours.Osobe.Count; i++)
+            {
+                if (tours.Osobe[i].Equals(passL.SelectedItem) || tours.Osobe[i].Equals(touristL.SelectedItem) || tours.Osobe[i].Equals(employeL.SelectedItem))
+                    tours.Osobe.Remove(tours.Osobe[i]);
+            }
+            
+        }
+
+        private void clickadd(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BlankPage1));
+            this.Frame.Visibility = 0;
         }
     }
 }

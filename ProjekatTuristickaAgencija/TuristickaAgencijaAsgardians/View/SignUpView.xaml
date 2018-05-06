@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" Margin="321,122,0,0" Text="Name:" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
-        <TextBox HorizontalAlignment="Left" Margin="472,226,0,0" Text="" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="adress" HorizontalAlignment="Left" Margin="472,226,0,0" Text="" VerticalAlignment="Top" Width="146"/>
         <TextBlock HorizontalAlignment="Left" Margin="293,180,0,0" Text="Surname:" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
         <TextBlock HorizontalAlignment="Left" Margin="313,238,0,0" Text="Adress:" TextWrapping="Wrap" VerticalAlignment="Top" Width="72"/>
         <TextBlock HorizontalAlignment="Left" Margin="233,299,0,0" Text="Phone number:" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
@@ -17,19 +17,19 @@
         <TextBlock HorizontalAlignment="Left" Margin="279,417,0,0" Text="Username:" TextWrapping="Wrap" VerticalAlignment="Top" Width="104"/>
         <TextBlock HorizontalAlignment="Left" Margin="287,472,0,0" Text="Password:" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
         <TextBlock HorizontalAlignment="Left" Margin="199,526,0,0" Text="Confirm password:" TextWrapping="Wrap" VerticalAlignment="Top" Width="183"/>
-        <TextBox HorizontalAlignment="Left" Margin="472,168,0,0" Text="" VerticalAlignment="Top" Width="146"/>
-        <TextBox HorizontalAlignment="Left" Margin="472,287,0,0" Text="" VerticalAlignment="Top" Width="146"/>
-        <TextBox HorizontalAlignment="Left" Margin="472,348,0,0" Text="" VerticalAlignment="Top" Width="146"/>
-        <TextBox HorizontalAlignment="Left" Margin="472,405,0,0" Text="" VerticalAlignment="Top" Width="146"/>
-        <TextBox HorizontalAlignment="Left" Margin="472,460,0,0" Text="" VerticalAlignment="Top" Width="146"/>
-        <TextBox HorizontalAlignment="Left" Margin="472,514,0,0" Text="" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="surname" HorizontalAlignment="Left" Margin="472,168,0,0" Text="" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="phnumber" HorizontalAlignment="Left" Margin="472,287,0,0" Text="" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Margin="472,348,0,0" Text="" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="username" HorizontalAlignment="Left" Margin="472,405,0,0" Text="" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Margin="472,460,0,0" Text="" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="confpassowrd" HorizontalAlignment="Left" Margin="472,514,0,0" Text="" VerticalAlignment="Top" Width="146"/>
         <TextBlock HorizontalAlignment="Left" Margin="792,417,0,0" Text="Have an account?" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
-        <Button Content="Log in" HorizontalAlignment="Left" Margin="819,460,0,0" VerticalAlignment="Top" Width="90"/>
-        <Button Content="Sign up" HorizontalAlignment="Left" Margin="513,577,0,0" VerticalAlignment="Top" Width="105"/>
+        <Button Content="Log in" HorizontalAlignment="Left" Margin="819,460,0,0" VerticalAlignment="Top" Width="90" Click="Button_ClickLogIn"/>
+        <Button Content="Sign up" HorizontalAlignment="Left" Margin="513,577,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click_SignUp"/>
         <Border BorderThickness="2" BorderBrush="Black">
-            <Image HorizontalAlignment="Left" Height="265" Margin="742,90,0,0" VerticalAlignment="Top" Width="265" Stretch="Fill" Opacity="0.7"/>
+            <Frame Content="Frame" HorizontalAlignment="Left" Height="563" Margin="93,61,0,0" VerticalAlignment="Top" Width="936"/>
         </Border>
-        <TextBox HorizontalAlignment="Left" Margin="472,110,0,0" Text="" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="472,110,0,0" Text="" VerticalAlignment="Top" Width="146"/>
 
     </Grid>
 </Page>

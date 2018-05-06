@@ -10,6 +10,7 @@ namespace TuristickaAgencijaAsgardians.Klase
     public class Lokacija
     {
         //private List<>
+        private string ime;
         private string informacije;
         private double cjena;
         private List<string> listaHotela;
@@ -20,13 +21,14 @@ namespace TuristickaAgencijaAsgardians.Klase
         {
         }
 
-        public Lokacija(string informacije, double cjena, List<string> listaHotela, List<Putnik> listaPutnika, List<string> atrakcija)
+        public Lokacija(string informacije, double cjena, List<string> listaHotela, List<Putnik> listaPutnika, List<string> atrakcija, string ime)
         {
-            this.informacije = informacije;
-            this.cjena = cjena;
-            this.listaHotela = listaHotela;
-            this.listaPutnika = listaPutnika;
-            this.atrakcija = atrakcija;
+            Informacije = informacije;
+            Cjena = cjena;
+            ListaHotela = listaHotela;
+            ListaPutnika = listaPutnika;
+            Atrakcija = atrakcija;
+            Ime = ime;
         }
 
         public string Informacije { get => informacije; set => informacije = value; }
@@ -34,6 +36,7 @@ namespace TuristickaAgencijaAsgardians.Klase
         public List<string> ListaHotela { get => listaHotela; set => listaHotela = value; }
         public List<Putnik> ListaPutnika { get => listaPutnika; set => listaPutnika = value; }
         public List<string> Atrakcija { get => atrakcija; set => atrakcija = value; }
+        public string Ime { get => ime; set => ime = value; }
 
         public void dodajPutnika(Putnik p)
         {

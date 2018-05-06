@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" Margin="279,129,0,0" Text="Name:" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="69"/>
-        <TextBox HorizontalAlignment="Left" Margin="429,245,0,0" Text="" VerticalAlignment="Top" Width="179" Height="34"/>
+        <TextBox x:Name="adress" HorizontalAlignment="Left" Margin="429,245,0,0" Text="" VerticalAlignment="Top" Width="179" Height="34"/>
         <TextBlock HorizontalAlignment="Left" Margin="249,190,0,0" Text="Surname:" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="99"/>
         <TextBlock HorizontalAlignment="Left" Margin="271,258,0,0" Text="Adress:" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="77"/>
         <TextBlock HorizontalAlignment="Left" Margin="186,320,0,0" Text="Phone number:" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="162"/>
@@ -17,18 +17,17 @@
         <TextBlock HorizontalAlignment="Left" Margin="236,425,0,0" Text="Username:" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="112"/>
         <TextBlock HorizontalAlignment="Left" Margin="242,476,0,0" Text="Password:" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="104"/>
         <TextBlock HorizontalAlignment="Left" Margin="151,531,0,0" Text="Confirm password:" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="197"/>
-        <TextBox HorizontalAlignment="Left" Margin="429,177,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.457,0.375" Width="179" Height="34"/>
-        <TextBox HorizontalAlignment="Left" Margin="429,308,0,0" Text="" VerticalAlignment="Top" Width="179" Height="33"/>
-        <TextBox HorizontalAlignment="Left" Margin="429,361,0,0" Text="" VerticalAlignment="Top" Width="179" Height="33"/>
-        <TextBox HorizontalAlignment="Left" Margin="429,412,0,0" Text="" VerticalAlignment="Top" Width="179" Height="34"/>
-        <TextBox HorizontalAlignment="Left" Margin="429,518,0,0" Text="" VerticalAlignment="Top" Width="179" Height="34"/>
-        <TextBox HorizontalAlignment="Left" Margin="429,463,0,0" Text="" VerticalAlignment="Top" Width="179" Height="34"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="886,564,0,0" VerticalAlignment="Top" Height="34" Width="77"/>
-        <Button Content="Sign up" HorizontalAlignment="Left" Margin="512,589,0,0" VerticalAlignment="Top" Height="34" Width="114"/>
+        <TextBox x:Name="surname" HorizontalAlignment="Left" Margin="429,177,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.457,0.375" Width="179" Height="34"/>
+        <TextBox x:Name="number" HorizontalAlignment="Left" Margin="429,308,0,0" Text="" VerticalAlignment="Top" Width="179" Height="33"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Margin="429,361,0,0" Text="" VerticalAlignment="Top" Width="179" Height="33"/>
+        <TextBox x:Name="username" HorizontalAlignment="Left" Margin="429,412,0,0" Text="" VerticalAlignment="Top" Width="179" Height="34"/>
+        <TextBox x:Name="confpass" HorizontalAlignment="Left" Margin="429,518,0,0" Text="" VerticalAlignment="Top" Width="179" Height="34"/>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Margin="429,463,0,0" Text="" VerticalAlignment="Top" Width="179" Height="34"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="532,580,0,0" VerticalAlignment="Top" Height="34" Width="77" Click="addclik"/>
         <Image HorizontalAlignment="Left" Height="190" Margin="802,163,0,0" VerticalAlignment="Top" Width="289" Stretch="Fill"/>
-        <TextBox HorizontalAlignment="Left" Margin="429,116,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.714,0.094" Width="179" Height="34"/>
-        <RadioButton Content="Tourist guide" HorizontalAlignment="Left" Margin="814,463,0,0" VerticalAlignment="Top" Height="34" Width="192"/>
-        <RadioButton Content="Employee" HorizontalAlignment="Left" Margin="814,502,0,0" VerticalAlignment="Top" Height="34" Width="192"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="429,116,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.714,0.094" Width="179" Height="34"/>
+        <RadioButton x:Name="vodic" Content="Tourist guide" HorizontalAlignment="Left" Margin="814,463,0,0" VerticalAlignment="Top" Height="34" Width="192"/>
+        <RadioButton x:Name="uposlenik" Content="Employee" HorizontalAlignment="Left" Margin="814,502,0,0" VerticalAlignment="Top" Height="34" Width="192"/>
         <TextBlock HorizontalAlignment="Left" Margin="814,412,0,0" Text="This person is:" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Height="22"/>
     </Grid>
 </Page>

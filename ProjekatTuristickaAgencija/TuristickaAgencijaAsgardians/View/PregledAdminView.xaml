@@ -12,11 +12,11 @@
         <TextBlock HorizontalAlignment="Left" Margin="533,101,0,0" Text="Tourist guides:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.565,0.3" Height="32" Width="201"/>
         <TextBlock HorizontalAlignment="Left" Margin="928,101,0,0" Text="Employees:" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="157"/>
         <ListView HorizontalAlignment="Left" Height="9" Margin="587,452,0,0" VerticalAlignment="Top" Width="33"/>
-        <ListBox HorizontalAlignment="Left" Height="309" Margin="137,176,0,0" VerticalAlignment="Top" Width="244"/>
-        <ListBox HorizontalAlignment="Left" Height="308" Margin="509,179,0,0" VerticalAlignment="Top" Width="246"/>
-        <ListBox HorizontalAlignment="Left" Height="312" Margin="867,173,0,0" VerticalAlignment="Top" Width="265"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="647,570,0,0" VerticalAlignment="Top" Width="127" Height="51"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="928,570,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.286,0.562" Height="51" Width="132"/>
+        <ListBox x:Name="passL" HorizontalAlignment="Left" Height="309" Margin="137,176,0,0" VerticalAlignment="Top" Width="244"/>
+        <ListBox x:Name="touristL" HorizontalAlignment="Left" Height="308" Margin="509,179,0,0" VerticalAlignment="Top" Width="246"/>
+        <ListBox x:Name="employeL" HorizontalAlignment="Left" Height="312" Margin="867,173,0,0" VerticalAlignment="Top" Width="265"/>
+        <Button x:Name="add" Content="Add" HorizontalAlignment="Left" Margin="647,570,0,0" VerticalAlignment="Top" Width="127" Height="51" Click="clickadd"/>
+        <Button x:Name="delete" Content="Delete" HorizontalAlignment="Left" Margin="928,570,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.286,0.562" Height="51" Width="132" Click="Button_Click_del"/>
 
     </Grid>
 </Page>
