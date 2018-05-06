@@ -9,7 +9,7 @@ namespace TuristickaAgencijaAsgardians.Klase
 {
     public class TuristickaAgencija
     {
-        private List<Osobe.Osoba> osobe;
+        private List<Osoba> osobe;
         private List<Lokacija> lokacije;
 
         public TuristickaAgencija()
@@ -20,7 +20,7 @@ namespace TuristickaAgencijaAsgardians.Klase
         {
 
         }
-        public void dodajUposlenika(Osobe.Uposlenik u)
+        public void dodajUposlenika(Uposlenik u)
         {
 
         }
@@ -37,7 +37,7 @@ namespace TuristickaAgencijaAsgardians.Klase
         {
 
         }
-        public void obrisiUposlenika(Osobe.Uposlenik u)
+        public void obrisiUposlenika(Uposlenik u)
         {
 
         }

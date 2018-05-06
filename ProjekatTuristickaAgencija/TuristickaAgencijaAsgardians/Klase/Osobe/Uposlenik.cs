@@ -18,7 +18,13 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 
         public Uposlenik(Uposlenik u)
         {
-
+            u.Ime = Ime;
+            u.Prezime = Prezime;
+            u.Username = Username;
+            u.Password = Password;
+            u.Email = Email;
+            u.Brtel = Brtel;
+            u.Adresa = Adresa;
         }
 
         public void dodajLokaciju(Lokacija l)

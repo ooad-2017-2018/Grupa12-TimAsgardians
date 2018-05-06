@@ -12,13 +12,15 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
         {
         }
 
-        public Admin(string ime, string prezime, string username, string password, string email, string brtel, string adresa) : base(ime, prezime, username, password, email, brtel, adresa)
-        {
-        }
+        
 
         public Admin(Admin a)
         {
 
+        }
+
+        public Admin(string ime, string prezime, string username, string password, string email, string brtel, string adresa) : base(ime, prezime, username, password, email, brtel, adresa)
+        {
         }
 
         public void dodajUposlenika(Uposlenik u)

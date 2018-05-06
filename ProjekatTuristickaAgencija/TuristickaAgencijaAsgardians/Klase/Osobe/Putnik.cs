@@ -21,7 +21,15 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 
         public Putnik(Putnik p)
         {
-
+            p.Ime = Ime;
+            p.Prezime = Prezime;
+            p.Username = Username;
+            p.Password = Password;
+            p.Email = Email;
+            p.Brtel = Brtel;
+            p.Adresa = Adresa;
+            p.kontaktiran = kontaktiran;
+            p.listaPoruka = listaPoruka;
         }
 
         public bool Kontaktiran { get => kontaktiran; set => kontaktiran = value; }

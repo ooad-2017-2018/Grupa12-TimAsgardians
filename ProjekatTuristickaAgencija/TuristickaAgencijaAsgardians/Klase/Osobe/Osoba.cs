@@ -33,7 +33,13 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 
         public Osoba(Osoba o)
         {
-
+            o.ime = ime;
+            o.prezime = prezime;
+            o.username = username;
+            o.password = password;
+            o.email = email;
+            o.brtel = brtel;
+            o.adresa = adresa;
         }
 
         public string Ime { get => ime; set => ime = value; }

@@ -20,7 +20,14 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 
         public Vodic(Vodic v)
         {
-
+            v.Ime = Ime;
+            v.Prezime = Prezime;
+            v.Username = Username;
+            v.Password = Password;
+            v.Email = Email;
+            v.Brtel = Brtel;
+            v.Adresa = Adresa;
+            v.zaduzeneLokacije = zaduzeneLokacije;
         }
 
         public void zaduziNaLokaciju(Lokacija l)

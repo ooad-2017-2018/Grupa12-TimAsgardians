@@ -13,11 +13,20 @@ namespace TuristickaAgencijaAsgardians.Klase
         private string informacije;
         private double cjena;
         private List<string> listaHotela;
-        private List<Osobe.Putnik> listaPutnika;
+        private List<Putnik> listaPutnika;
         private List<string> atrakcija;
 
         public Lokacija()
         {
+        }
+
+        public Lokacija(string informacije, double cjena, List<string> listaHotela, List<Putnik> listaPutnika, List<string> atrakcija)
+        {
+            this.informacije = informacije;
+            this.cjena = cjena;
+            this.listaHotela = listaHotela;
+            this.listaPutnika = listaPutnika;
+            this.atrakcija = atrakcija;
         }
 
         public string Informacije { get => informacije; set => informacije = value; }
