@@ -28,18 +28,21 @@ namespace TuristickaAgencijaAsgardians.View
         public LogInView()
         {
             this.InitializeComponent();
+            tours = new TuristickaAgencija();
+            
         }
 
         public LogInView(ref TuristickaAgencija refTours)
         {
-            tours = refTours;
             this.InitializeComponent();
+            tours = new TuristickaAgencija();
+            tours = refTours;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            myView.Navigate(typeof(SignUpView));
-            this.Frame.Visibility = 0;
+            Page signup = new SignUpView(ref tours);
+            this.Content = signup;
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -49,10 +52,27 @@ namespace TuristickaAgencijaAsgardians.View
             {
                 if(textBoxUser.Text == tours.Osobe[i].Username && textBoxPass.Text == tours.Osobe[i].Password)
                 {
-                    if(tours.Osobe[i].GetType()==typeof(Vodic)) myView.Navigate(typeof(PregledAdminView));//promjenit
-                    if (tours.Osobe[i].GetType() == typeof(Putnik)) myView.Navigate(typeof(PregledAdminView));//promjenit
-                    if (tours.Osobe[i].GetType() == typeof(Uposlenik)) myView.Navigate(typeof(UposlenikView));
-                    
+                    if (tours.Osobe[i].GetType() == typeof(Admin))
+                    {
+                        Page admPage = new PregledAdminView(ref tours);
+                        this.Content = admPage;
+                    }
+                    if (tours.Osobe[i].GetType()==typeof(Vodic))
+                    {
+                        Page admPage = new PregledAdminView(ref tours);
+                        this.Content = admPage;
+                    }//promjenit
+                    if (tours.Osobe[i].GetType() == typeof(Putnik))
+                    {
+                        Page admPage = new PregledAdminView(ref tours);
+                        this.Content = admPage;
+                    }//promjenit
+                    if (tours.Osobe[i].GetType() == typeof(Uposlenik))
+                    {
+                        Page uposPage = new UposlenikView(ref tours);
+                        this.Content = uposPage;
+                    }
+
                 }
             }
         }
@@ -69,7 +89,12 @@ namespace TuristickaAgencijaAsgardians.View
 
         private void myView_Navigated(object sender, NavigationEventArgs e)
         {
+            
+        }
 
+        private void myView_Loaded(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }

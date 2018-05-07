@@ -22,13 +22,23 @@ namespace TuristickaAgencijaAsgardians.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BlankPage1 : Page
+    public sealed partial class DodavanjeClanaAdmin : Page
     {
         TuristickaAgencija tours;
-        public BlankPage1()
+        public DodavanjeClanaAdmin()
         {
             this.InitializeComponent();
+            tours = new TuristickaAgencija();
         }
+
+        public DodavanjeClanaAdmin(ref TuristickaAgencija refTours)
+        {
+            this.InitializeComponent();
+            tours = new TuristickaAgencija();
+            tours = refTours;
+        }
+
+
 
         private void addclik(object sender, RoutedEventArgs e)
         {
@@ -39,7 +49,14 @@ namespace TuristickaAgencijaAsgardians.View
                 else
                     tours.Osobe.Add(new Uposlenik(name.Text, surname.Text, username.Text, password.Text, email.Text, number.Text, adress.Text));
             }
-           
+            Page adm = new PregledAdminView(ref tours);
+            this.Content = adm;
+        }
+
+        private void CancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Page adm = new PregledAdminView(ref tours);
+            this.Content = adm;
         }
     }
 }

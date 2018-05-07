@@ -25,7 +25,7 @@ namespace TuristickaAgencijaAsgardians
     /// </summary>
     sealed partial class App : Application
     {
-        TuristickaAgencija tours = new TuristickaAgencija();
+        TuristickaAgencija tours;
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -35,6 +35,8 @@ namespace TuristickaAgencijaAsgardians
             
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            tours = new TuristickaAgencija();
+            tours.Osobe.Add(new Admin("ajdin", "horde", "ajdin", "horde", "asidhasd", "90123", "iasdj"));
         }
 
         /// <summary>
@@ -71,7 +73,10 @@ namespace TuristickaAgencijaAsgardians
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(LogInView), e.Arguments);
+
+                    //rootFrame.Navigate(typeof(LogInView), e.Arguments);
+                    Page adm = new LogInView(ref tours);
+                    rootFrame.Content = adm;
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

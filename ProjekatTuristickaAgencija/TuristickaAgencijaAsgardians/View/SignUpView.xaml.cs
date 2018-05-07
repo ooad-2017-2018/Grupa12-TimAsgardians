@@ -28,20 +28,31 @@ namespace TuristickaAgencijaAsgardians.View
         public SignUpView()
         {
             this.InitializeComponent();
+            tours = new TuristickaAgencija();
         }
 
-       
+        public SignUpView(ref TuristickaAgencija refTours)
+        {
+            this.InitializeComponent();
+            tours = new TuristickaAgencija();
+            tours = refTours;
+        }
+
+
         private void Button_ClickLogIn(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(SignUpView));
-            this.Frame.Visibility = 0;
+            Page login = new LogInView(ref tours);
+            this.Content = login;
         }
 
         private void Button_Click_SignUp(object sender, RoutedEventArgs e)
         {           
             if (password.Text==confpassowrd.Text)
                 tours.Osobe.Add(new Putnik(name.Text, surname.Text, username.Text, password.Text, email.Text, phnumber.Text, adress.Text));
-            Frame.Navigate(typeof(PregledAdminView));
+
+            //Treba promijeniti u novu formu
+            Page novi = new PregledAdminView(ref tours);
+            this.Content = novi;
         }
     }
 }

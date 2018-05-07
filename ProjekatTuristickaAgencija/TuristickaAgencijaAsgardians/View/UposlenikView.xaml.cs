@@ -30,6 +30,14 @@ namespace TuristickaAgencijaAsgardians.View
         public UposlenikView()
         {
             this.InitializeComponent();
+            tours = new TuristickaAgencija();
+        }
+
+        public UposlenikView(ref TuristickaAgencija refTours)
+        {
+            this.InitializeComponent();
+            tours = new TuristickaAgencija();
+            tours = refTours;
         }
 
         private async void clkpassdet(object sender, RoutedEventArgs e)

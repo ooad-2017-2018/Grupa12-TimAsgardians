@@ -12,7 +12,7 @@ namespace TuristickaAgencijaAsgardians.Klase
         //private List<>
         private string ime;
         private string informacije;
-        private double cjena;
+        private double cijena;
         private List<string> listaHotela;
         private List<Putnik> listaPutnika;
         private List<string> atrakcija;
@@ -21,18 +21,28 @@ namespace TuristickaAgencijaAsgardians.Klase
         {
         }
 
-        public Lokacija(string informacije, double cjena, List<string> listaHotela, List<Putnik> listaPutnika, List<string> atrakcija, string ime)
+        public Lokacija(string informacije, double cijena, List<string> listaHotela, List<Putnik> listaPutnika, List<string> atrakcija, string ime)
         {
             Informacije = informacije;
-            Cjena = cjena;
+            Cijena = cijena;
             ListaHotela = listaHotela;
             ListaPutnika = listaPutnika;
             Atrakcija = atrakcija;
             Ime = ime;
         }
 
+        public Lokacija(Lokacija l)
+        {
+            informacije = l.Informacije;
+            cijena = l.Cijena;
+            listaHotela = l.ListaHotela;
+            listaPutnika = l.ListaPutnika;
+            atrakcija = l.Atrakcija;
+            ime = l.Ime;
+        }
+
         public string Informacije { get => informacije; set => informacije = value; }
-        public double Cjena { get => cjena; set => cjena = value; }
+        public double Cijena { get => cijena; set => cijena = value; }
         public List<string> ListaHotela { get => listaHotela; set => listaHotela = value; }
         public List<Putnik> ListaPutnika { get => listaPutnika; set => listaPutnika = value; }
         public List<string> Atrakcija { get => atrakcija; set => atrakcija = value; }
@@ -40,11 +50,19 @@ namespace TuristickaAgencijaAsgardians.Klase
 
         public void dodajPutnika(Putnik p)
         {
-
+            listaPutnika.Add(new Putnik(p));
         }
         public void obrisiPutnika(Putnik p)
         {
-
+            //NE VALJA
+            foreach (Putnik put in listaPutnika)
+            {
+                if (put.Equals(p))
+                {
+                    listaPutnika.Remove(p);
+                    break;
+                }
+            }
         }
         public void obrisiPutnike()
         {

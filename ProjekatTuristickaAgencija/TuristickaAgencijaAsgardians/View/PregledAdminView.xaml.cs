@@ -28,6 +28,21 @@ namespace TuristickaAgencijaAsgardians.View
         public PregledAdminView()
         {
             this.InitializeComponent();
+            tours = new TuristickaAgencija();
+        }
+
+        public PregledAdminView(ref TuristickaAgencija refTours)
+        {
+            this.InitializeComponent();
+            tours = new TuristickaAgencija();
+            tours = refTours;
+            foreach (Osoba o in tours.Osobe)
+            {
+                if (o is Uposlenik) employeL.Items.Add(o);
+                else if (o is Vodic) touristL.Items.Add(o);
+                else if (o is Putnik) passL.Items.Add(o);
+            }
+            
         }
         
 
@@ -38,13 +53,16 @@ namespace TuristickaAgencijaAsgardians.View
                 if (tours.Osobe[i].Equals(passL.SelectedItem) || tours.Osobe[i].Equals(touristL.SelectedItem) || tours.Osobe[i].Equals(employeL.SelectedItem))
                     tours.Osobe.Remove(tours.Osobe[i]);
             }
-            
+            Page reload = new PregledAdminView(ref tours);
+            this.Content = reload;
         }
 
         private void clickadd(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(BlankPage1));
-            this.Frame.Visibility = 0;
+            
+            Page dodajClana = new DodavanjeClanaAdmin(ref tours);
+            this.Content = dodajClana;
+
         }
     }
 }
