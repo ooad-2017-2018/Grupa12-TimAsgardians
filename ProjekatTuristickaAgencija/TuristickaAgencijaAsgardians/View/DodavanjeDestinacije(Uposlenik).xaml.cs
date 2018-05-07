@@ -22,39 +22,34 @@ namespace TuristickaAgencijaAsgardians.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SignUpView : Page
+    public sealed partial class DodavanjeDestinacije_Uposlenik_ : Page
     {
         TuristickaAgencija tours;
-        public SignUpView()
+        public DodavanjeDestinacije_Uposlenik_()
         {
             this.InitializeComponent();
             tours = new TuristickaAgencija();
         }
 
-        public SignUpView(ref TuristickaAgencija refTours)
+        public DodavanjeDestinacije_Uposlenik_(ref TuristickaAgencija refTours)
         {
             this.InitializeComponent();
             tours = new TuristickaAgencija();
             tours = refTours;
         }
 
-
-        private void Button_ClickLogIn(object sender, RoutedEventArgs e)
+        private void dodaj_Click(object sender, RoutedEventArgs e)
         {
-            Page login = new LogInView(ref tours);
-            this.Content = login;
-        }
-
-        private void Button_Click_SignUp(object sender, RoutedEventArgs e)
-        {           
-            if (password.Text==confpassowrd.Text)
-                tours.Osobe.Add(new Putnik(name.Text, surname.Text, username.Text, password.Text, email.Text, phnumber.Text, adress.Text));
-            
-            Page page = new HomePage(ref tours);
+            Page page = new UposlenikView(ref tours);
             this.Content = page;
         }
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

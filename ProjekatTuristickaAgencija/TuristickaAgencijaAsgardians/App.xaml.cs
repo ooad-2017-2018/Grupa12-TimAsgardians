@@ -75,7 +75,7 @@ namespace TuristickaAgencijaAsgardians
                     // parameter
 
                     //rootFrame.Navigate(typeof(LogInView), e.Arguments);
-                    Page adm = new LogInView(ref tours);
+                    Page adm = new HomePage(ref tours);
                     rootFrame.Content = adm;
                 }
                 // Ensure the current window is active

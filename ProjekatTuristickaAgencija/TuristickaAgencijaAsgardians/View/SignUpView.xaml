@@ -26,7 +26,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="792,417,0,0" Text="Have an account?" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
         <Button Content="Log in" HorizontalAlignment="Left" Margin="806,460,0,0" VerticalAlignment="Top" Width="90" Click="Button_ClickLogIn"/>
         <Button Content="Sign up" HorizontalAlignment="Left" Margin="513,577,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click_SignUp"/>
-        <Frame Content="Frame" HorizontalAlignment="Left" Height="587" Margin="88,69,0,0" VerticalAlignment="Top" Width="936"/>
+        <Frame Content="Frame" HorizontalAlignment="Left" Height="587" Margin="88,69,0,0" VerticalAlignment="Top" Width="936" Navigated="Frame_Navigated"/>
         <TextBox x:Name="name" HorizontalAlignment="Left" Margin="472,110,0,0" Text="" VerticalAlignment="Top" Width="146"/>
 
     </Grid>

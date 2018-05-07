@@ -49,8 +49,8 @@ namespace TuristickaAgencijaAsgardians.View
 
         private void clkaddlokacija(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(SignUpView));//dodat formu za dodavanje lokacija
-            this.Frame.Visibility = 0;
+            Page page = new DodavanjeDestinacije_Uposlenik_(ref tours);
+            this.Content = page;
         }
 
         private void clkobrisilokaciju(object sender, RoutedEventArgs e)

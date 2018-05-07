@@ -59,12 +59,12 @@ namespace TuristickaAgencijaAsgardians.View
                     }
                     if (tours.Osobe[i].GetType()==typeof(Vodic))
                     {
-                        Page admPage = new PregledAdminView(ref tours);
+                        Page admPage = new Pregled_Vodic_(ref tours);
                         this.Content = admPage;
                     }//promjenit
                     if (tours.Osobe[i].GetType() == typeof(Putnik))
                     {
-                        Page admPage = new PregledAdminView(ref tours);
+                        Page admPage = new HomePage(ref tours);
                         this.Content = admPage;
                     }//promjenit
                     if (tours.Osobe[i].GetType() == typeof(Uposlenik))
@@ -89,12 +89,12 @@ namespace TuristickaAgencijaAsgardians.View
 
         private void myView_Navigated(object sender, NavigationEventArgs e)
         {
-            
+
         }
 
         private void myView_Loaded(object sender, RoutedEventArgs e)
         {
-           
+
         }
     }
 }
