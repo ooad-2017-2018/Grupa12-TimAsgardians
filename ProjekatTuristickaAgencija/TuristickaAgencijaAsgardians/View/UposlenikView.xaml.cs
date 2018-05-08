@@ -38,6 +38,10 @@ namespace TuristickaAgencijaAsgardians.View
             this.InitializeComponent();
             tours = new TuristickaAgencija();
             tours = refTours;
+            for(int i =0;i<tours.Lokacije.Count; i++)
+            {
+                lokacije.Items.Add(tours.Lokacije[i].Ime);
+            }
         }
 
         private async void clkpassdet(object sender, RoutedEventArgs e)
@@ -77,6 +81,11 @@ namespace TuristickaAgencijaAsgardians.View
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void lokacije_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

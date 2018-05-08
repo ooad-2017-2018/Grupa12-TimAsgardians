@@ -49,5 +49,10 @@ namespace TuristickaAgencijaAsgardians.View
             Page page = new Rezervacija_putnik_(ref tours);
             this.Content = page;
         }
+
+        private void Frame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

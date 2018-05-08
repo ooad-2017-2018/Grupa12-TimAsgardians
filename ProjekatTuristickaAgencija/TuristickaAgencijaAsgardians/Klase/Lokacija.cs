@@ -21,12 +21,12 @@ namespace TuristickaAgencijaAsgardians.Klase
         {
         }
 
-        public Lokacija(string informacije, double cijena, List<string> listaHotela, List<Putnik> listaPutnika, List<string> atrakcija, string ime)
+        public Lokacija(string informacije, double cijena, List<string> listaHotela, List<string> atrakcija, string ime)
         {
             Informacije = informacije;
             Cijena = cijena;
             ListaHotela = listaHotela;
-            ListaPutnika = listaPutnika;
+           
             Atrakcija = atrakcija;
             Ime = ime;
         }

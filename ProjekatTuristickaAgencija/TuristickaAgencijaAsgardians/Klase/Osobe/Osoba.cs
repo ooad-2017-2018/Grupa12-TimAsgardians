@@ -50,6 +50,7 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
         public string Brtel { get => brtel; set => brtel = value; }
         public string Adresa { get => adresa; set => adresa = value; }
 
+        //abstract public string To_String(Osoba o);
 
     }
 }

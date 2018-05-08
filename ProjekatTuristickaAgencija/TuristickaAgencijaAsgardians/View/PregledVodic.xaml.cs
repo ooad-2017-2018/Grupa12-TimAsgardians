@@ -36,6 +36,10 @@ namespace TuristickaAgencijaAsgardians.View
             this.InitializeComponent();
             tours = new TuristickaAgencija();
             tours = refTours;
+            foreach(Lokacija l in tours.Lokacije)
+            {
+                lokacije.Items.Add(l.Ime);
+            }
         }
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {

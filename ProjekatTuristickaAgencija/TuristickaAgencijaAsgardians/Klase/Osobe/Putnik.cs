@@ -34,6 +34,9 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 
         public bool Kontaktiran { get => kontaktiran; set => kontaktiran = value; }
         public Dictionary<bool, string> ListaPoruka { get => listaPoruka; set => listaPoruka = value; }
-
+        override public string ToString()
+        {
+            return this.Ime + " " + this.Prezime;
+        }
     }
 }

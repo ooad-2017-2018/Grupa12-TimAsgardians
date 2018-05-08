@@ -64,5 +64,10 @@ namespace TuristickaAgencijaAsgardians.View
             this.Content = dodajClana;
 
         }
+
+        private void passL_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

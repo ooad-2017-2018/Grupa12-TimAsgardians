@@ -38,6 +38,9 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
         {
 
         }
-
+        override public string ToString()
+        {
+            return this.Ime + " " + this.Prezime;
+        }
     }
 }

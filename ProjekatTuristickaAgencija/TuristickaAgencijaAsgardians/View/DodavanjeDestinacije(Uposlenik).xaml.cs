@@ -40,6 +40,26 @@ namespace TuristickaAgencijaAsgardians.View
 
         private void dodaj_Click(object sender, RoutedEventArgs e)
         {
+            List<string> ls=new List<string>();
+            for(int i=0; i<hoteli.Text.Length; i++)
+            {
+                int a = i;
+                while (hoteli.Text[a] != ',') a++;
+                string s = hoteli.Text.Substring(i, a-1);
+                i = a;
+                ls.Add(s);
+            }
+            List<string> la = new List<string>();
+            for (int i = 0; i < mainatr.Text.Length; i++)
+            {
+                int a = i;
+                while (mainatr.Text[a] != ',') a++;
+                string s = mainatr.Text.Substring(i, a-1);
+                i = a;
+                la.Add(s);
+            }
+
+            tours.Lokacije.Add(new Lokacija(info.Text,Convert.ToDouble(cjena.Text),ls,la,ime.Text));
             Page page = new UposlenikView(ref tours);
             this.Content = page;
         }

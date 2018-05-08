@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListBox x:Name="putnikL" HorizontalAlignment="Left" Height="258" Margin="566,260,0,0" VerticalAlignment="Top" Width="180"/>
-        <ListBox x:Name="lokacije" HorizontalAlignment="Left" Height="258" Margin="146,176,0,0" VerticalAlignment="Top" Width="180"/>
+        <ListBox x:Name="lokacije" HorizontalAlignment="Left" Height="258" Margin="146,176,0,0" VerticalAlignment="Top" Width="180" SelectionChanged="lokacije_SelectionChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="169,137,0,0" Text="Current destinations:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="522,138,0,0" Text="Click to see passengers on this location:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="527,222,0,0" Text="List of passengers on selected location:" TextWrapping="Wrap" VerticalAlignment="Top"/>

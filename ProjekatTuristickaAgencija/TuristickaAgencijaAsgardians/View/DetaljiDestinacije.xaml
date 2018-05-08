@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Frame HorizontalAlignment="Left" Margin="72,75,0,0" VerticalAlignment="Top" Height="860" Width="1337">
+        <Frame HorizontalAlignment="Left" Margin="72,75,0,0" VerticalAlignment="Top" Height="860" Width="1337" Navigated="Frame_Navigated">
             <Custom:MapControl HorizontalAlignment="Left" Margin="72,84,0,0" VerticalAlignment="Top" Height="329" Width="527"/>
         </Frame>
         <TextBlock HorizontalAlignment="Left" Margin="391,246,0,0" Text="Map:" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" RenderTransformOrigin="-3.968,1.567">
