@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristickaAgencijaAsgardians.Klase.Osobe
 {
-    public class Vodic:Osoba
+    public class Vodic:Osoba, Interface.IVodic
     {
         private List<Lokacija> zaduzeneLokacije;
 
@@ -30,13 +30,16 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
             v.zaduzeneLokacije = zaduzeneLokacije;
         }
 
-        public void zaduziNaLokaciju(Lokacija l)
+        void Interface.IVodic.zaduziNaLokaciju(Lokacija l)
         {
-
+            zaduzeneLokacije.Add(l);
         }
-        public void razduziSaLokaciju(Lokacija l)
+        void Interface.IVodic.razduziSaLokacije(Lokacija l)
         {
-
+            for(int i=0; i<zaduzeneLokacije.Count; i++)
+            {
+                if (l == zaduzeneLokacije[i]) zaduzeneLokacije.Remove(zaduzeneLokacije[i]);
+            }
         }
         override public string ToString()
         {

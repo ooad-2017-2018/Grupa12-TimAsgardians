@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristickaAgencijaAsgardians.Klase.Osobe
 {
-    public class Admin : Osoba
+    public class Admin : Osoba, Interface.IAdmin
     {
         public Admin()
         {
@@ -23,19 +23,19 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
         {
         }
 
-        public void dodajUposlenika(Uposlenik u)
+        void Interface.IAdmin.dodajUposlenika(Uposlenik u)
         {
 
         }
-        public void obrisiUposlenika(Uposlenik u)
+        void Interface.IAdmin.obrisiUposlenika(Uposlenik u)
         {
 
         }
-        public void dodajVodica(Vodic v)
+        void Interface.IAdmin.dodajVodica(Vodic v)
         {
 
         }
-        public void obrisiVodica(Vodic v)
+        void Interface.IAdmin.obrisiVodica(Vodic v)
         {
 
         }

@@ -95,6 +95,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Klase\Interface\IAdmin.cs" />
+    <Compile Include="Klase\Interface\IPutnik.cs" />
+    <Compile Include="Klase\Interface\IUposlenik.cs" />
+    <Compile Include="Klase\Interface\IVodic.cs" />
+    <Compile Include="Klase\Interface\KontaktPutnika.cs" />
     <Compile Include="Klase\Lokacija.cs" />
     <Compile Include="Klase\Osobe\Admin.cs" />
     <Compile Include="Klase\Osobe\Osoba.cs" />

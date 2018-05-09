@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristickaAgencijaAsgardians.Klase.Osobe
 {
-    public class Uposlenik : Osoba
+    public class Uposlenik : Osoba, Interface.IUposlenik, Interface.KontaktPutnika
     {
         public Uposlenik()
         {
@@ -27,14 +27,22 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
             u.Adresa = Adresa;
         }
 
-        public void dodajLokaciju(Lokacija l)
+        void Interface.IUposlenik.dodajLokaciju(Lokacija l)
+        {
+            
+        }
+        void Interface.IUposlenik.obrisiLokaciju(Lokacija l)
         {
 
         }
-        public void obrisiLokaciju(Lokacija l)
-        {
 
+        void Interface.KontaktPutnika.kontaktirajPutnika(Osobe.Putnik p, string poruka)
+        {
+            p.Kontaktiran = true;
+            p.ListaPoruka.Add(false, poruka);
         }
+
+
         override public string ToString()
         {
             return this.Ime + " " + this.Prezime;
