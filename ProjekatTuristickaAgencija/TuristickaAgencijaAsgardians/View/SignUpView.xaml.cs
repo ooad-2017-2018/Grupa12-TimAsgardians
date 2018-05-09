@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using TuristickaAgencijaAsgardians.Klase;
 using TuristickaAgencijaAsgardians.Klase.Osobe;
+using System.Text.RegularExpressions;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +26,8 @@ namespace TuristickaAgencijaAsgardians.View
     public sealed partial class SignUpView : Page
     {
         TuristickaAgencija tours;
+        Regex imeRegex = new Regex("^([^0-9]*)$");
+        Regex brojRegex = new Regex("^[0-9]*$");
         public SignUpView()
         {
             this.InitializeComponent();
@@ -46,17 +49,51 @@ namespace TuristickaAgencijaAsgardians.View
         }
 
         private void Button_Click_SignUp(object sender, RoutedEventArgs e)
-        {           
-            if (password.Text==confpassowrd.Text)
+        {
+            if (!Validated())
+            {
+                contentProvider.Content += "Please correct your mistakes!";
+            }
+            else
+            {
                 tours.Osobe.Add(new Putnik(name.Text, surname.Text, username.Text, password.Text, email.Text, phnumber.Text, adress.Text));
-            
-            Page page = new HomePage(ref tours);
-            this.Content = page;
+                Page page = new HomePage(ref tours);
+                this.Content = page;
+            }
         }
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
 
+        }
+        private bool Validated()
+        {
+            if (!imeRegex.IsMatch(name.Text))
+            {
+                contentProvider.Content = "A name cannot have numbers in it!\n";
+                return false;
+            }
+            if (!imeRegex.IsMatch(surname.Text))
+            {
+                contentProvider.Content = "A surname cannot have numbers in it!\n";
+                return false;
+            }
+            if (name.Text == "" || surname.Text == "" || adress.Text == "" || phnumber.Text == "" || email.Text == "" || username.Text == "" || password.Text == "" || confpassowrd.Text == "")
+            {
+                contentProvider.Content = "Fields cannot be empty!\n";
+                return false;
+            }
+            if (!brojRegex.IsMatch(phnumber.Text))
+            {
+                contentProvider.Content = "Invalid phone number!\n";
+                return false;
+            }
+            if (password.Text != confpassowrd.Text)
+            {
+                contentProvider.Content = "Passwords do not match!\n";
+                return false;
+            }
+            return true;
         }
     }
 }

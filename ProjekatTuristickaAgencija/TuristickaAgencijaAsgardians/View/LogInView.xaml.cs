@@ -47,10 +47,14 @@ namespace TuristickaAgencijaAsgardians.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (textBoxUser.Text == "admin" && textBoxPass.Text == "admin") myView.Navigate(typeof(PregledAdminView));
+            if (textBoxUser.Text == "admin" && passBox.Password == "admin")
+            {
+                myView.Navigate(typeof(PregledAdminView));
+                return;
+            }
             for(int i = 0; i < tours.Osobe.Count; i++)
             {
-                if(textBoxUser.Text == tours.Osobe[i].Username && textBoxPass.Text == tours.Osobe[i].Password)
+                if(textBoxUser.Text == tours.Osobe[i].Username && passBox.Password == tours.Osobe[i].Password)
                 {
                     if (tours.Osobe[i].GetType() == typeof(Admin))
                     {
@@ -79,12 +83,12 @@ namespace TuristickaAgencijaAsgardians.View
 
         private void textBoxPass_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            if (textBoxUser.Text == "admin" && textBoxPass.Text == "admin" && e.Key.Equals('\n')) myView.Navigate(typeof(PregledAdminView));
+            if (textBoxUser.Text == "admin" && passBox.Password == "admin" && e.Key.Equals('\n')) myView.Navigate(typeof(PregledAdminView));
         }
 
         private void textBoxPass_PreviewKeyDown(object sender, KeyRoutedEventArgs e)
         {
-            if (textBoxUser.Text == "admin" && textBoxPass.Text == "admin" && e.Key.Equals('\n')) myView.Navigate(typeof(PregledAdminView));
+            if (textBoxUser.Text == "admin" && passBox.Password == "admin" && e.Key.Equals('\n')) myView.Navigate(typeof(PregledAdminView));
         }
 
         private void myView_Navigated(object sender, NavigationEventArgs e)
@@ -95,6 +99,14 @@ namespace TuristickaAgencijaAsgardians.View
         private void myView_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void passBox_PreviewKeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                btnLogin_Click(this, new RoutedEventArgs());
+            }
         }
     }
 }

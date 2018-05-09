@@ -17,6 +17,7 @@
         <ListBox x:Name="employeL" HorizontalAlignment="Left" Height="312" Margin="867,173,0,0" VerticalAlignment="Top" Width="265"/>
         <Button x:Name="add" Content="Add" HorizontalAlignment="Left" Margin="647,570,0,0" VerticalAlignment="Top" Width="127" Height="51" Click="clickadd"/>
         <Button x:Name="delete" Content="Delete" HorizontalAlignment="Left" Margin="928,570,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.286,0.562" Height="51" Width="132" Click="Button_Click_del"/>
+        <Button x:Name="btnLogout" Content="Log Out" HorizontalAlignment="Left" Margin="385,570,0,0" VerticalAlignment="Top" Height="51" Width="127" Click="btnLogout_Click"/>
 
     </Grid>
 </Page>

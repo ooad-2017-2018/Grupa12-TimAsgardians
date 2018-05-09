@@ -17,7 +17,7 @@
         <TextBox HorizontalAlignment="Left" Margin="483,472,0,0" Text="TextBox" VerticalAlignment="Top" Width="296"/>
         <TextBox HorizontalAlignment="Left" Margin="483,557,0,0" Text="TextBox" VerticalAlignment="Top" Width="296"/>
         <DatePicker HorizontalAlignment="Left" Margin="483,638,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="platibutton" Content="Pay" HorizontalAlignment="Left" Margin="807,732,0,0" VerticalAlignment="Top" Click="platibutton_Click"/>
+        <Button x:Name="platibutton" Content="Pay" HorizontalAlignment="Left" Margin="979,598,0,0" VerticalAlignment="Top" Click="platibutton_Click"/>
         <Frame Content="Frame" HorizontalAlignment="Left" Margin="222,114,0,0" VerticalAlignment="Top" Height="712" Width="697" Navigated="Frame_Navigated"/>
 
     </Grid>

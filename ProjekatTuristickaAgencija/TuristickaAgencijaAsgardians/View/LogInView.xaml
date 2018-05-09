@@ -11,10 +11,11 @@
         <TextBox x:Name="textBoxUser" HorizontalAlignment="Left" Margin="545,230,0,0" Text="" VerticalAlignment="Top" Width="235"/>
         <TextBlock HorizontalAlignment="Left" Margin="432,242,0,0" Text="Username:" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="124"/>
         <TextBlock HorizontalAlignment="Left" Margin="437,305,0,0" Text="Password:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxPass" HorizontalAlignment="Left" Margin="545,293,0,0" Text="" VerticalAlignment="Top" Width="235" KeyDown="textBoxPass_KeyDown" PreviewKeyDown="textBoxPass_PreviewKeyDown"/>
         <TextBlock HorizontalAlignment="Left" Margin="501,432,0,0" Text="Don't have an account?" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button x:Name="btnLogin" Content="Log in" HorizontalAlignment="Left" Margin="631,357,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.085,0.188" Click="btnLogin_Click"/>
         <Button Content="Sign up" HorizontalAlignment="Left" Margin="693,426,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.667,14" Click="Button_Click"/>
-        <Frame Name="myView" Navigated="myView_Navigated" Margin="5,0,-5,0" Loaded="myView_Loaded"></Frame>
+        <Frame Name="myView" Navigated="myView_Navigated" Margin="5,0,-5,0" Loaded="myView_Loaded">
+            <PasswordBox x:Name="passBox" HorizontalAlignment="Left" Margin="541,300,0,0" VerticalAlignment="Top" Width="235" PreviewKeyDown="passBox_PreviewKeyDown"/>
+        </Frame>
     </Grid>
 </Page>

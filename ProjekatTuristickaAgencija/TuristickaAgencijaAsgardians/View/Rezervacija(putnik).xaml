@@ -8,13 +8,13 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="357,165,0,0" Text="Choose an interval within you would like to depart" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="357,378,0,0" Text="Possible dates of departure:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <ListBox HorizontalAlignment="Left" Height="222" Margin="357,452,0,0" VerticalAlignment="Top" Width="183"/>
-        <DatePicker HorizontalAlignment="Left" Margin="357,228,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="357,300,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="izabeributton" Content="Choose" HorizontalAlignment="Left" Margin="357,729,0,0" VerticalAlignment="Top" Click="izabeributton_Click"/>
-        <Button x:Name="nazadbutton" Content="Go back" HorizontalAlignment="Left" Margin="552,729,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.277,-0.438" Click="nazadbutton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="357,128,0,0" Text="Choose an interval within you would like to depart" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="357,318,0,0" Text="Possible dates of departure:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ListBox HorizontalAlignment="Left" Height="222" Margin="357,389,0,0" VerticalAlignment="Top" Width="183"/>
+        <DatePicker x:Name="prviDatum" HorizontalAlignment="Left" Margin="357,183,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="drugiDatum" HorizontalAlignment="Left" Margin="357,249,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="izabeributton" Content="Choose" HorizontalAlignment="Left" Margin="619,579,0,0" VerticalAlignment="Top" Click="izabeributton_Click"/>
+        <Button x:Name="nazadbutton" Content="Go back" HorizontalAlignment="Left" Margin="706,579,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.277,-0.438" Click="nazadbutton_Click"/>
         <Frame Content="Frame" HorizontalAlignment="Left" Margin="268,128,0,0" VerticalAlignment="Top" Height="696" Width="513" Navigated="Frame_Navigated"/>
 
     </Grid>

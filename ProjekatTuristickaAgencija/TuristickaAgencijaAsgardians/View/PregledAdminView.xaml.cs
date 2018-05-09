@@ -38,9 +38,9 @@ namespace TuristickaAgencijaAsgardians.View
             tours = refTours;
             foreach (Osoba o in tours.Osobe)
             {
-                if (o is Uposlenik) employeL.Items.Add(o);
-                else if (o is Vodic) touristL.Items.Add(o);
-                else if (o is Putnik) passL.Items.Add(o);
+                if (o is Uposlenik) employeL.Items.Add(o.ToString());
+                else if (o is Vodic) touristL.Items.Add(o.ToString());
+                else if (o is Putnik) passL.Items.Add(o.ToString());
             }
             
         }
@@ -50,8 +50,10 @@ namespace TuristickaAgencijaAsgardians.View
         {
             for (int i = 0; i < tours.Osobe.Count; i++)
             {
-                if (tours.Osobe[i].Equals(passL.SelectedItem) || tours.Osobe[i].Equals(touristL.SelectedItem) || tours.Osobe[i].Equals(employeL.SelectedItem))
+                if (tours.Osobe[i].ToString().Equals(passL.SelectedItem) || tours.Osobe[i].ToString().Equals(touristL.SelectedItem) || tours.Osobe[i].ToString().Equals(employeL.SelectedItem))
+                {
                     tours.Osobe.Remove(tours.Osobe[i]);
+                }
             }
             Page reload = new PregledAdminView(ref tours);
             this.Content = reload;
@@ -68,6 +70,12 @@ namespace TuristickaAgencijaAsgardians.View
         private void passL_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            Page home = new HomePage(ref tours);
+            this.Content = home;
         }
     }
 }

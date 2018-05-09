@@ -8,24 +8,22 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListBox HorizontalAlignment="Left" Height="100" Margin="1490,518,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="273,126,0,0" Text="Location name:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="273,130,0,0" Text="Location name:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="233,233,0,0" Text="Location information:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="329,464,0,0" Text="Hotels:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="263,578,0,0" Text="Main attractions:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="246,692,0,0" Text="Dates of departure:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="975,130,0,0" Text="Destination images:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="338,349,0,0" Text="Price:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="329,436,0,0" Text="Hotels:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="264,544,0,0" Text="Main attractions:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="247,632,0,0" Text="Dates of departure:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="762,102,0,0" Text="Destination images:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="339,333,0,0" Text="Price:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:Name="ime" HorizontalAlignment="Left" Margin="437,118,0,0" Text="TextBox" VerticalAlignment="Top" Width="123"/>
-        <TextBox x:Name="info" HorizontalAlignment="Left" Margin="437,233,0,0" Text="TextBox" VerticalAlignment="Top" Width="123"/>
-        <TextBox x:Name="cjena" HorizontalAlignment="Left" Margin="437,349,0,0" Text="TextBox" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="123"/>
-        <TextBox x:Name="hoteli" HorizontalAlignment="Left" Margin="437,464,0,0" Text="TextBox" VerticalAlignment="Top" Width="123"/>
-        <TextBox x:Name="mainatr" HorizontalAlignment="Left" Margin="437,578,0,0" Text="TextBox" VerticalAlignment="Top" Width="123"/>
-        <TextBox x:Name="detalji" HorizontalAlignment="Left" Margin="437,692,0,0" Text="TextBox" VerticalAlignment="Top" Width="123"/>
-        <Button x:Name="dodaj" Content="Add" HorizontalAlignment="Left" Margin="1021,496,0,0" VerticalAlignment="Top" Click="dodaj_Click"/>
-        <Frame HorizontalAlignment="Left" Margin="132,52,0,0" VerticalAlignment="Top" Height="803" Width="1238" Navigated="Frame_Navigated">
-            <Image HorizontalAlignment="Left" Height="100" Margin="973,134,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.29,0.48"/>
-        </Frame>
+        <TextBox x:Name="info" HorizontalAlignment="Left" Margin="437,221,0,0" Text="TextBox" VerticalAlignment="Top" Width="123"/>
+        <TextBox x:Name="cjena" HorizontalAlignment="Left" Margin="437,321,0,0" Text="TextBox" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="123"/>
+        <TextBox x:Name="hoteli" HorizontalAlignment="Left" Margin="437,424,0,0" Text="TextBox" VerticalAlignment="Top" Width="123"/>
+        <TextBox x:Name="mainatr" HorizontalAlignment="Left" Margin="437,532,0,0" Text="TextBox" VerticalAlignment="Top" Width="123"/>
+        <TextBox x:Name="detalji" HorizontalAlignment="Left" Margin="437,620,0,0" Text="TextBox" VerticalAlignment="Top" Width="123"/>
+        <Button x:Name="dodaj" Content="Add" HorizontalAlignment="Left" Margin="810,370,0,0" VerticalAlignment="Top" Click="dodaj_Click"/>
+        <Image HorizontalAlignment="Left" Height="170" Margin="726,162,0,0" VerticalAlignment="Top" Width="219" RenderTransformOrigin="0.29,0.48"/>
+        <Frame HorizontalAlignment="Left" Margin="132,52,0,0" VerticalAlignment="Top" Height="803" Width="1238" Navigated="Frame_Navigated"></Frame>
 
     </Grid>
 </Page>
