@@ -36,7 +36,7 @@ namespace TuristickaAgencijaAsgardians.Klase
             informacije = l.Informacije;
             cijena = l.Cijena;
             listaHotela = l.ListaHotela;
-            listaPutnika = l.ListaPutnika;
+            ListaPutnika = l.ListaPutnika;
             atrakcija = l.Atrakcija;
             ime = l.Ime;
         }
@@ -44,22 +44,22 @@ namespace TuristickaAgencijaAsgardians.Klase
         public string Informacije { get => informacije; set => informacije = value; }
         public double Cijena { get => cijena; set => cijena = value; }
         public List<string> ListaHotela { get => listaHotela; set => listaHotela = value; }
-        public List<Putnik> ListaPutnika { get => listaPutnika; set => listaPutnika = value; }
         public List<string> Atrakcija { get => atrakcija; set => atrakcija = value; }
         public string Ime { get => ime; set => ime = value; }
+        public List<Putnik> ListaPutnika { get => listaPutnika; set => listaPutnika = value; }
 
         public void dodajPutnika(Putnik p)
         {
-            listaPutnika.Add(new Putnik(p));
+            ListaPutnika.Add(new Putnik(p));
         }
         public void obrisiPutnika(Putnik p)
         {
             //NE VALJA
-            foreach (Putnik put in listaPutnika)
+            foreach (Putnik put in ListaPutnika)
             {
                 if (put.Equals(p))
                 {
-                    listaPutnika.Remove(p);
+                    ListaPutnika.Remove(p);
                     break;
                 }
             }

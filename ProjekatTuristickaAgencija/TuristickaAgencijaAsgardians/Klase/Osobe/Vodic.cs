@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace TuristickaAgencijaAsgardians.Klase.Osobe
 {
-    public class Vodic:Osoba, Interface.IVodic
+    public class Vodic:Osoba
     {
         private List<Lokacija> zaduzeneLokacije;
+
+        public List<Lokacija> ZaduzeneLokacije { get => zaduzeneLokacije; set => zaduzeneLokacije = value; }
 
         public Vodic()
         {
@@ -27,20 +29,9 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
             v.Email = Email;
             v.Brtel = Brtel;
             v.Adresa = Adresa;
-            v.zaduzeneLokacije = zaduzeneLokacije;
+            v.ZaduzeneLokacije = ZaduzeneLokacije;
         }
 
-        void Interface.IVodic.zaduziNaLokaciju(Lokacija l)
-        {
-            zaduzeneLokacije.Add(l);
-        }
-        void Interface.IVodic.razduziSaLokacije(Lokacija l)
-        {
-            for(int i=0; i<zaduzeneLokacije.Count; i++)
-            {
-                if (l == zaduzeneLokacije[i]) zaduzeneLokacije.Remove(zaduzeneLokacije[i]);
-            }
-        }
         override public string ToString()
         {
             return this.Ime + " " + this.Prezime;

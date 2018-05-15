@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristickaAgencijaAsgardians.Klase.Osobe
 {
-    public class Putnik :Osoba, Interface.IPutnik
+    public class Putnik :Osoba
     {
         private bool kontaktiran;
         private Dictionary<bool, string> listaPoruka;
@@ -38,17 +38,8 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
         {
             return this.Ime + " " + this.Prezime;
         }
-        void Interface.IPutnik.rezervisiLokaciju(Lokacija l)
-        {
-
-        }
-        void Interface.IPutnik.otkaziLokaciju(Lokacija l)
-        {
-
-        }
-        void Interface.IPutnik.provjeriPoruke()
-        {
-
-        }
+      
+        
+        
     }
 }
