@@ -1,0 +1,30 @@
+1.Facade pattern
+
+Implementatori cesto koriste facade pattern kada je program vrlo složen ili teško razumljiv jer ima velik broj medusobno ovisnih klasa 
+ili zato što izvorni kod nije dostupan. 
+Ovaj pattern skriva složenosti veceg programa i pruža jednostavniji interfejs klijentu.
+U principu, jedna klasa predstavlja citav sistem.
+Mi smo to predstavili na nacin da klasa Turisticka Agencija sadrži kao atribute liste svih Osoba(Vodic, Admin, Putnik i Uposlenik) 
+kao i listu svih mogucih lokacija, metode dodavanja i brisanja odgovarajucih lokacija kao i osoba.
+
+2.Prototype pattern
+
+Uloga Prototype paterna je da kreira nove objekte klonirajuci jednu od postojecih prototip instanci (postojeci objekat). 
+Ako je trošak kreiranja novog objekta velik i kreiranje objekta je resursno zahtjevno tada se vrši kloniranje vec postojeceg objekata. 
+Prototype dizajn patern dozvoljava da se kreiraju prilagodeni objekti bez poznavanja njihove klase ili detalja kako je objekat kreiran.
+Protype patern se koristi kada je potrebno da se sakriju konkretne klase od klijenta, dodaju ili izbrišu nove klase za vrijeme izvršavanja, 
+da se broj klasa u sistemu održi na minimumu, kada je potrebna promjena strukture podataka za vrijeme izvršavanja.
+Ovaj pattern nismo iskoristili u našem projektu.
+Možemo ga iskoristiti na sljedeci nacin. 
+Ukoliko bismo htjeli raditi u buducnosti nešto sa registrovanim putnicima, ili uposlenicima, 
+prvim api pozivom ka bazi dobijemo sve registrovane putnike ili uposlenike, zatim ih kloniramo za neku novu upotrebu.
+
+3.Interpreter pattern
+
+U dobro strukturiranom okruženju cesto dolazi do razlicitih problema, koji bi bili lako rješivi kada bi se samo okruženje (domen) moglo opisati nekim 'jezikom'. 
+Tada bi interpreter tog jezika mogao lako da riješi probleme koji se javljaju.Interpreter pattern služi za evaluiranje gramatike nekog jezika i jezickih izraza. 
+Implementira se AbstractExpression interface koji koristi kompozitni pattern da bi riješio neki jezicki problem. 
+Obicno se koriste TerminalExpression i CompoundExpression klase koje služe za rekurzivno rješavanje problema interpretacije nekog jezickog izraza gdje je 
+CompoundExpression neki dio pravila koji poziva drugo pravilo za obradu izraza, dok je TerminalExpression bazni slucaj za neko pravilo.
+Što se tice našeg projekta, mi smo dati pattern primijenili na validaciju. 
+Koristimo ga za provjeru validnosti šifre pri registraciji korisnika (npr. da li je uneseno dovoljno znakova, da li su velika i mala slova, da li ima brojeva i drugih znakova).
