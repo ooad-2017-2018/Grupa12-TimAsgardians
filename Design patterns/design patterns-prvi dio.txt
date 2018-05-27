@@ -1,0 +1,26 @@
+1.Singleton pattern
+Uloga Singleton paterna je da osigura da se klasa može instancirati samo jednom i da osigura globalni pristup kreiranoj instanci klase. 
+Postoji više objekata koje je potrebno samo jednom instancirati i nad kojim je potrebna jedinstvena kontrola pristupa. 
+Neki od njih su: thread pools (skupina niti), objekti koji upravljaju setovanjem registara, objekti koji se koriste za logiranje, 
+objekti koji se koriste kao drajveri za razne uredaje kao što su printeri i graficke kartice. 
+Instanciranje više nego jednom navedenih objekata mogu se prouzrokovati problemi kao što su nekorektno ponašanje programa, neadekvantno korištenje resursa ili
+nekonzistentan rezultat.
+Što se tice našeg projekta, mi nismo iskoristili ovaj pattern. 
+Medutim, mogli smo ga iskoristiti u klasi Turisticka agencija jer nam je potrebna u suštini samo jedna instanca te klase.
+To smo mogli postici tako što bismo stavili private umjesto public na konstruktor te klase.
+Iako tehnicki mi jesmo napravili samo jednu instancu te klase, nismo ništa uradili da bismo zaustavili da neko drugi napravi jos instanci ove klase.
+2.State pattern
+Objekat mijenja nacin ponašanja na osnovu trenutnog stanja.
+Ovaj pattern smo iskoristili u našem projektu. 
+Nakon rezervacije, prilikom placanja dolazi do validiranja kartice, tj. do provjere da li ima novca na kartici. 
+Ukoliko je kartica odbijena, klijent se obavještava i nije u mogucnosti izvršiti rezervaciju i placanje puta, ukoliko je kartica prihvacena, 
+klijent se obavještava o  uspješnoj transakciji.
+3.Iterator pattern
+Dati pattern je pattern ponašanja.
+Iterator patern omogucava sekvencijalni pristup elementima kolekcije bez poznavanja kako je kolekcija strukturirana.
+Ovaj pattern se koristi kada je potrebno imati uniforan nacin pristupa bilo kojoj kolekciji. 
+Ako recimo želimo iz nekog razloga da primimo ArrayList, Array i sl., možemo iskoristiti iterator interface pomocu kojeg cemo najbolje omoguciti uniforan pristup i 
+napraviti bolji polimorfizam.
+Ovaj pattern nismo iskoristili u našem projektu. 
+Ovo bi se trebalo implementirati ukoliko postoji više vrsta kolekcija u programu. 
+Što se tice našeg projekta, mi smo koristili prilikom implementacije samo liste tako da ovaj pattern nije od nekog znacaja.
