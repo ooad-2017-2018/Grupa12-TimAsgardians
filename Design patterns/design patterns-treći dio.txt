@@ -1,0 +1,15 @@
+Mediator pattern
+Mediator pattern se koristi za smanjivanje složenosti komunikacije izmedu više objekata ili klasa. 
+Ovaj pattern obezbjeduje klasu medijatora koja obicno bavi sa svim komunikacijama izmedu razlicitih klasa.
+Što se tice našeg projekta, mi nismo iskoristili ovaj pattern.Medutim, mogli smo ga iskoristiti izmedu klasa Uposlenik i Putnik.
+
+Observer pattern
+Observer patern je pattern u kojem objekat održava listu svojih zavisnika i automatski ih obaveštava o svim promjenama stanja, obicno pozivanjem jedne od njihovih metoda.
+Observer pattern se koristi ukoliko postoje jedna-na-više veze izmedu objekata takve da ako se jedan objekat modifikuje,ostali ce biti obavješteni automatski.
+Što se tice našeg projekta, mi nismo iskoristili ovaj pattern.Medutim, mogli smo ga iskoristiti u klasi Uposlenik,kada uposlenik obrise jedu od aktuleni destinacija da svi putnici koji su rezervisali destinaciju budu obavjesteni da destinacija je otkazana.
+
+Strategy pattern
+Strategy pattern omogucava izbor algoritma u toku rada. Umjesto da implementira jedan algoritam direktno, kod primi instrukcije za vrijeme pokretanja koje se koriste u porodici algoritama. 
+On omogucava algoritmu da varira nezavisno od klijenata koji ga koriste.Koristimo ga kad na primjer klasa koja vrši validaciju na primljenim podacima može koristiti ovaj pattern za odabir algoritma validacije u zavisnosti od vrste podataka, izvora podataka, izbora korisnika ili drugih faktora.
+Ovi faktori nisu poznati sve dok se ne pokrene kod i može zahtijevati radikalno razlicitu validaciju.
+Što se tice našeg projekta, mi nismo iskoristili ovaj pattern. Medutim, mogli smo ga iskoristiti prilikom login na upravo opisanom primjeru , to jeste da validiramo podatake koji se unesu.
