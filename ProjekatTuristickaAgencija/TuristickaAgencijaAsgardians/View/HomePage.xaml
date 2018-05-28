@@ -15,7 +15,7 @@
         <ComboBox x:Name="lok" HorizontalAlignment="Left" Margin="667,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.184,1.414"/>
         <TextBlock HorizontalAlignment="Left" Margin="518,86,0,0" Text="Izaberite lokaciju:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Frame HorizontalAlignment="Left" Margin="78,10,0,0" VerticalAlignment="Top" Height="896" Width="1205" Navigated="Frame_Navigated">
-            <Image HorizontalAlignment="Left" Height="670" Margin="42,173,0,0" VerticalAlignment="Top" Width="1123"/>
+            <Image HorizontalAlignment="Left" Height="670" Margin="42,173,0,0" VerticalAlignment="Top" Width="1123" Source="ms-appx:///Assets/pozadina.jpg"/>
         </Frame>
 
     </Grid>
