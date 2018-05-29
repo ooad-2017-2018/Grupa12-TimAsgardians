@@ -196,14 +196,25 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PutnikController.cs" />
+    <Compile Include="Controllers\UposlenikController.cs" />
+    <Compile Include="Controllers\VodicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Lokacija.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Osoba.cs" />
+    <Compile Include="Models\Putnik.cs" />
+    <Compile Include="Models\TuristickaAgencija.cs" />
+    <Compile Include="Models\Uposlenik.cs" />
+    <Compile Include="Models\Vodic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -269,6 +280,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\Putnik\" />
+    <Folder Include="Views\Uposlenik\" />
+    <Folder Include="Views\Vodic\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -297,7 +312,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51347</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
