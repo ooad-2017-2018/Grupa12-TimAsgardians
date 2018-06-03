@@ -7,6 +7,7 @@ namespace ProjekatAsgardiansNet.Models
 {
     public class Uposlenik : Osoba
     {
+        public int UposlenikId { get; set; }
         public Uposlenik()
         {
         }

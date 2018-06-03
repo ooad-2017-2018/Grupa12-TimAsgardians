@@ -7,6 +7,7 @@ namespace ProjekatAsgardiansNet.Models
 {
     public class Admin : Osoba
     {
+        public int AdminID { get; set; }
         public Admin()
         {
         }

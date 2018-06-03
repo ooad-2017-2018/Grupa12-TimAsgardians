@@ -13,6 +13,7 @@ namespace ProjekatAsgardiansNet.Models
         private List<string> listaHotela;
         private List<Putnik> listaPutnika;
         private List<string> atrakcija;
+        public int LokacijaId { get; set; }
 
         public Lokacija()
         {

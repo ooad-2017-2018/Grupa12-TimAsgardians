@@ -8,7 +8,7 @@ namespace ProjekatAsgardiansNet.Models
     public class Vodic : Osoba
     {
         private List<Lokacija> zaduzeneLokacije;
-
+        public int VodicId { get; set; }
         public List<Lokacija> ZaduzeneLokacije { get => zaduzeneLokacije; set => zaduzeneLokacije = value; }
 
         public Vodic()

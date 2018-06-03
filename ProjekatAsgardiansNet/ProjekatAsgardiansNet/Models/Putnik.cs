@@ -9,7 +9,7 @@ namespace ProjekatAsgardiansNet.Models
     {
         private bool kontaktiran;
         private Dictionary<bool, string> listaPoruka;
-
+        public int PutnikId { get; set; }
         public Putnik()
         {
         }
