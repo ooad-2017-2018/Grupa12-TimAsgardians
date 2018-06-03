@@ -207,6 +207,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\AsgardiansContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Lokacija.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
