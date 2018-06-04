@@ -29,6 +29,7 @@ namespace TuristickaAgencijaAsgardians.View
         {
             this.InitializeComponent();
             tours = new TuristickaAgencija();
+           
         }
 
         public HomePage(ref TuristickaAgencija refTours)
@@ -36,7 +37,11 @@ namespace TuristickaAgencijaAsgardians.View
             this.InitializeComponent();
             tours = new TuristickaAgencija();
             tours = refTours;
-            foreach(Lokacija l in tours.Lokacije)
+            lok.Items.Add("London");
+            lok.Items.Add("Sarajevo");
+            lok.Items.Add("Vienna");
+            lok.Items.Add("Moscow");
+            foreach (Lokacija l in tours.Lokacije)
             {
                 lok.Items.Add(l.Ime);
             }
@@ -44,7 +49,8 @@ namespace TuristickaAgencijaAsgardians.View
 
         private void Detalji_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new DetaljiDestinacije(ref tours);
+            string s = lok.SelectedItem.ToString();
+            Page page = new DetaljiDestinacije(ref tours,ref s);
             this.Content = page;
         }
 

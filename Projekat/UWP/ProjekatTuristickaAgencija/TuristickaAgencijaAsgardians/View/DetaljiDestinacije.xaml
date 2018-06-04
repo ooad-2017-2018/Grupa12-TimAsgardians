@@ -10,7 +10,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Frame HorizontalAlignment="Left" Margin="72,75,0,0" VerticalAlignment="Top" Height="635" Width="1198" Navigated="Frame_Navigated">
-            <Custom:MapControl HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="329" Width="527"/>
+            <Custom:MapControl x:Name="mapa" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="329" Width="527"/>
         </Frame>
         <TextBlock HorizontalAlignment="Left" Margin="310,193,0,0" Text="Map:" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" RenderTransformOrigin="-3.968,1.567">
             <TextBlock.RenderTransform>

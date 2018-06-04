@@ -46,7 +46,8 @@ namespace TuristickaAgencijaAsgardians.View
 
         private void nazadbutton_Click(object sender, RoutedEventArgs e)
         {
-            Page page = new DetaljiDestinacije(ref tours);
+            string s="";
+            Page page = new DetaljiDestinacije(ref tours,ref s);
             this.Content = page;
         }
 
