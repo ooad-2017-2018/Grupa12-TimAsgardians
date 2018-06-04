@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,12 +8,18 @@ namespace ProjekatAsgardiansNet.Models
 {
     public class Lokacija
     {
-        private string ime;
-        private string informacije;
-        private double cijena;
-        private List<string> listaHotela;
-        private List<Putnik> listaPutnika;
-        private List<string> atrakcija;
+        [Required]
+        protected string ime;
+        protected string informacije;
+        [Required]
+        protected double cijena;
+
+        protected List<string> listaHotela;
+        protected List<Putnik> listaPutnika;
+        protected List<string> atrakcija;
+
+        [ScaffoldColumn(false)]
+        public int LokacijaId { get; set; }
 
         public Lokacija()
         {

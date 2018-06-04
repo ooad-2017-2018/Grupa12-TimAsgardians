@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -9,7 +10,8 @@ namespace ProjekatAsgardiansNet.Models
     {
         private bool kontaktiran;
         private Dictionary<bool, string> listaPoruka;
-
+        [ScaffoldColumn(false)]
+        public int PutnikId { get; set; }
         public Putnik()
         {
         }

@@ -196,17 +196,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AdminsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LokacijasController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\PutnikController.cs" />
-    <Compile Include="Controllers\UposlenikController.cs" />
-    <Compile Include="Controllers\VodicController.cs" />
+    <Compile Include="Controllers\PutniksController.cs" />
+    <Compile Include="Controllers\UposleniksController.cs" />
+    <Compile Include="Controllers\VodicsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\AsgardiansContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Lokacija.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -277,13 +280,34 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Admins\Create.cshtml" />
+    <Content Include="Views\Admins\Delete.cshtml" />
+    <Content Include="Views\Admins\Details.cshtml" />
+    <Content Include="Views\Admins\Edit.cshtml" />
+    <Content Include="Views\Admins\Index.cshtml" />
+    <Content Include="Views\Lokacijas\Create.cshtml" />
+    <Content Include="Views\Lokacijas\Delete.cshtml" />
+    <Content Include="Views\Lokacijas\Details.cshtml" />
+    <Content Include="Views\Lokacijas\Edit.cshtml" />
+    <Content Include="Views\Lokacijas\Index.cshtml" />
+    <Content Include="Views\Putniks\Create.cshtml" />
+    <Content Include="Views\Putniks\Delete.cshtml" />
+    <Content Include="Views\Putniks\Details.cshtml" />
+    <Content Include="Views\Putniks\Edit.cshtml" />
+    <Content Include="Views\Putniks\Index.cshtml" />
+    <Content Include="Views\Uposleniks\Create.cshtml" />
+    <Content Include="Views\Uposleniks\Delete.cshtml" />
+    <Content Include="Views\Uposleniks\Details.cshtml" />
+    <Content Include="Views\Uposleniks\Edit.cshtml" />
+    <Content Include="Views\Uposleniks\Index.cshtml" />
+    <Content Include="Views\Vodics\Create.cshtml" />
+    <Content Include="Views\Vodics\Delete.cshtml" />
+    <Content Include="Views\Vodics\Details.cshtml" />
+    <Content Include="Views\Vodics\Edit.cshtml" />
+    <Content Include="Views\Vodics\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Putnik\" />
-    <Folder Include="Views\Uposlenik\" />
-    <Folder Include="Views\Vodic\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

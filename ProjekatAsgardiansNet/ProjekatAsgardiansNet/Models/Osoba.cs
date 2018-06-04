@@ -2,18 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjekatAsgardiansNet.Models
 {
     public abstract class Osoba
     {
-        private string ime;
-        private string prezime;
-        private string username;
-        private string password;
-        private string email;
-        private string brtel;
-        private string adresa;
+        [Required]
+        protected string ime;
+        [Required]
+        protected string prezime;
+        [Required]
+        protected string username;
+        [Required]
+        protected string password;
+        [Required]
+        protected string email;
+        [Required]
+        protected string brtel;
+        [Required]
+        protected string adresa;
+        [ScaffoldColumn(false)]
+        public int OsobaId;
 
         public Osoba()
         {

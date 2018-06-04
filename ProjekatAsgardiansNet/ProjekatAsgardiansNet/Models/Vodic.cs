@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,7 +9,8 @@ namespace ProjekatAsgardiansNet.Models
     public class Vodic : Osoba
     {
         private List<Lokacija> zaduzeneLokacije;
-
+        [ScaffoldColumn(false)]
+        public int VodicId { get; set; }
         public List<Lokacija> ZaduzeneLokacije { get => zaduzeneLokacije; set => zaduzeneLokacije = value; }
 
         public Vodic()

@@ -17,6 +17,7 @@ namespace ProjekatAsgardiansNet.Models
         {
             osobe = new List<Osoba>();
             lokacije = new List<Lokacija>();
+            osobe.Add(new Admin("ajdin", "karahasanovic", "ajdinka", "ooadbager", "akarahasan3@etf.unsa.ba", "062062062", "Trg Nezavisnosti 15"));
         }
 
         public void dodajAdmina(Admin a)
