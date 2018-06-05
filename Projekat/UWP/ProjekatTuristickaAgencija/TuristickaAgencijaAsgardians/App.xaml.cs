@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 using TuristickaAgencijaAsgardians.View;
 using TuristickaAgencijaAsgardians.Klase;
 using TuristickaAgencijaAsgardians.Klase.Osobe;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace TuristickaAgencijaAsgardians
 {
@@ -39,6 +40,7 @@ namespace TuristickaAgencijaAsgardians
             tours.Osobe.Add(new Admin("ajdin", "horde", "ajdin", "horde", "asidhasd", "90123", "iasdj"));
         }
 
+        public static MobileServiceClient mobileService = new MobileServiceClient("http://projekatasgardianswebapi.azurewebsites.net/");
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.

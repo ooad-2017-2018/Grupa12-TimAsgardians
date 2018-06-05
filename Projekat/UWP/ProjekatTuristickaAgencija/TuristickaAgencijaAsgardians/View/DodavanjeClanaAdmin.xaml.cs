@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.WindowsAzure.MobileServices;
 using TuristickaAgencijaAsgardians.Klase;
 using TuristickaAgencijaAsgardians.Klase.Osobe;
 using System.Text.RegularExpressions;
@@ -41,7 +42,8 @@ namespace TuristickaAgencijaAsgardians.View
             tours = refTours;
         }
 
-
+        IMobileServiceTable<Vodic> vodiciTable = App.mobileService.GetTable<Vodic>();
+        IMobileServiceTable<Uposlenik> uposleniciTable = App.mobileService.GetTable<Uposlenik>();
 
         private void addclik(object sender, RoutedEventArgs e)
         {
@@ -53,9 +55,21 @@ namespace TuristickaAgencijaAsgardians.View
             else
             {
                 if (Convert.ToBoolean(vodic.IsChecked))
-                    tours.Osobe.Add(new Vodic(name.Text, surname.Text, username.Text, password.Text, email.Text, number.Text, adress.Text));
+                {
+                    Vodic tempVodic = new Vodic(name.Text, surname.Text, username.Text, password.Text, email.Text, number.Text, adress.Text);
+                    tours.Osobe.Add(new Vodic(tempVodic));
+                    tours.Vodici.Add(tempVodic);
+                    tempVodic.Id = tours.Vodici.Count;
+                    vodiciTable.InsertAsync(tempVodic);
+                }
                 else
-                    tours.Osobe.Add(new Uposlenik(name.Text, surname.Text, username.Text, password.Text, email.Text, number.Text, adress.Text));
+                {
+                    Uposlenik tempUpos = new Uposlenik(name.Text, surname.Text, username.Text, password.Text, email.Text, number.Text, adress.Text);
+                    tours.Osobe.Add(new Uposlenik(tempUpos));
+                    tours.Uposlenici.Add(tempUpos);
+                    tempUpos.Id = tours.Uposlenici.Count;
+                    uposleniciTable.InsertAsync(tempUpos);
+                }
                 Page adm = new PregledAdminView(ref tours);
                 this.Content = adm;
             }

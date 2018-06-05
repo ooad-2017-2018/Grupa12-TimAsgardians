@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.WindowsAzure.MobileServices;
 using TuristickaAgencijaAsgardians.Klase;
 using TuristickaAgencijaAsgardians.Klase.Osobe;
 using System.Text.RegularExpressions;
@@ -47,7 +48,7 @@ namespace TuristickaAgencijaAsgardians.View
             Page login = new LogInView(ref tours);
             this.Content = login;
         }
-
+        IMobileServiceTable<Putnik> putniciTable = App.mobileService.GetTable<Putnik>();
         private void Button_Click_SignUp(object sender, RoutedEventArgs e)
         {
             if (!Validated())
@@ -56,7 +57,12 @@ namespace TuristickaAgencijaAsgardians.View
             }
             else
             {
-                tours.Osobe.Add(new Putnik(name.Text, surname.Text, username.Text, password.Text, email.Text, phnumber.Text, adress.Text));
+                Putnik tempPut = new Putnik(name.Text, surname.Text, username.Text, password.Text, email.Text, phnumber.Text, adress.Text);
+                tours.Osobe.Add(tempPut);
+                tours.Putnici.Add(tempPut);
+                tempPut.PutnikId = tours.Putnici.Count;
+                putniciTable.InsertAsync(tempPut);
+
                 Page page = new HomePage(ref tours);
                 this.Content = page;
             }

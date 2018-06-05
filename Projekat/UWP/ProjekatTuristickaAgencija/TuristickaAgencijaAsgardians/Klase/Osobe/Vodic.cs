@@ -8,6 +8,8 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 {
     public class Vodic:Osoba
     {
+        public int Id { get; set; }
+
         private List<Lokacija> zaduzeneLokacije;
 
         public List<Lokacija> ZaduzeneLokacije { get => zaduzeneLokacije; set => zaduzeneLokacije = value; }
@@ -22,14 +24,14 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 
         public Vodic(Vodic v)
         {
-            v.Ime = Ime;
-            v.Prezime = Prezime;
-            v.Username = Username;
-            v.Password = Password;
-            v.Email = Email;
-            v.Brtel = Brtel;
-            v.Adresa = Adresa;
-            v.ZaduzeneLokacije = ZaduzeneLokacije;
+            this.Ime = v.Ime;
+            this.Prezime = v.Prezime;
+            this.Username = v.Username;
+            this.Password = v.Password;
+            this.Email = v.Email;
+            this.Brtel = v.Brtel;
+            this.Adresa = v.Adresa;
+            this.Id = v.Id;
         }
 
         override public string ToString()

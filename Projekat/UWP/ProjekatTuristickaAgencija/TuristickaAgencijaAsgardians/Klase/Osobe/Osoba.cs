@@ -15,6 +15,8 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
         private string email;
         private string brtel;
         private string adresa;
+        public int OsobaId { get; set; }
+
 
         public Osoba()
         {
@@ -33,13 +35,14 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 
         public Osoba(Osoba o)
         {
-            o.ime = ime;
-            o.prezime = prezime;
-            o.username = username;
-            o.password = password;
-            o.email = email;
-            o.brtel = brtel;
-            o.adresa = adresa;
+            this.Ime = o.Ime;
+            this.Prezime = o.Prezime;
+            this.Username = o.Username;
+            this.Password = o.Password;
+            this.Email = o.Email;
+            this.Brtel = o.Brtel;
+            this.Adresa = o.Adresa;
+            this.OsobaId = o.OsobaId;
         }
 
         public string Ime { get => ime; set => ime = value; }

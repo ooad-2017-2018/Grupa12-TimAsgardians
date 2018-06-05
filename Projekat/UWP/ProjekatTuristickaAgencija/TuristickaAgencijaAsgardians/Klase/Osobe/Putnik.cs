@@ -10,6 +10,7 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
     {
         private bool kontaktiran;
         private Dictionary<bool, string> listaPoruka;
+        public int PutnikId { get; set; }
 
         public Putnik()
         {
@@ -21,15 +22,14 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 
         public Putnik(Putnik p)
         {
-            p.Ime = Ime;
-            p.Prezime = Prezime;
-            p.Username = Username;
-            p.Password = Password;
-            p.Email = Email;
-            p.Brtel = Brtel;
-            p.Adresa = Adresa;
-            p.kontaktiran = kontaktiran;
-            p.listaPoruka = listaPoruka;
+            this.Ime = p.Ime;
+            this.Prezime = p.Prezime;
+            this.Username = p.Username;
+            this.Password = p.Password;
+            this.Email = p.Email;
+            this.Brtel = p.Brtel;
+            this.Adresa = p.Adresa;
+            this.PutnikId = p.PutnikId;
         }
 
         public bool Kontaktiran { get => kontaktiran; set => kontaktiran = value; }

@@ -8,6 +8,8 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 {
     public class Uposlenik : Osoba
     {
+        public int Id { get; set; }
+
         public Uposlenik()
         {
         }
@@ -18,13 +20,14 @@ namespace TuristickaAgencijaAsgardians.Klase.Osobe
 
         public Uposlenik(Uposlenik u)
         {
-            u.Ime = Ime;
-            u.Prezime = Prezime;
-            u.Username = Username;
-            u.Password = Password;
-            u.Email = Email;
-            u.Brtel = Brtel;
-            u.Adresa = Adresa;
+            this.Ime = u.Ime;
+            this.Prezime = u.Prezime;
+            this.Username = u.Username;
+            this.Password = u.Password;
+            this.Email = u.Email;
+            this.Brtel = u.Brtel;
+            this.Adresa = u.Adresa;
+            this.Id = u.Id;
         }
 
         override public string ToString()
